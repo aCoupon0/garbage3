@@ -1,0 +1,473 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html {
+    touch-action: manipulation;
+}
+
+@font-face {
+    font-family: 'Vintage';
+    /* Nombre de la fuente */
+    src: url('assets/fonts/Vintage-Goods.otf') format('opentype');
+    /* Ruta relativa a la carpeta styles.css */
+}
+
+@font-face {
+    font-family: 'Bogart';
+    src: url('assets/fonts/Bogart.ttf') format('opentype');
+}
+
+@font-face {
+    font-family: 'GI';
+    src: url('assets/fonts/GlacialIndifference-Regular.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'GIB';
+    src: url('assets/fonts/GlacialIndifference-Bold.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'Ale';
+    src: url('assets/fonts/Alegreya.ttf') format('opentype');
+}
+
+body,
+html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+.background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow-y: auto;
+    /* Solo desplazamiento vertical cuando sea necesario */
+    background: linear-gradient(to bottom right, #ffffff, #f0f0f0);
+    /* Color de fondo deseado */
+}
+
+.logo-zone {
+    width: 100%;
+    height: 8%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.first-name {
+    font-family: 'GI';
+    margin-left: 20px;
+    color: #0CC0DF;
+    font-size: 25px;
+}
+
+.second-name {
+    font-family: 'GI';
+    font-size: 25px;
+}
+
+.discount-zone {
+    width: 100%;
+    height: 7%;
+    background: linear-gradient(to bottom, #FF3131, #E16E27);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.discount-zone p {
+    color: white;
+    font-family: 'Ale';
+    font-size: 24px;
+}
+
+.main-photo-container {
+    width: 100%;
+    height: 19%;
+}
+
+.promo-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* Ajusta la imagen para cubrir el contenedor */
+    object-position: center;
+}
+
+.name-zone {
+    width: 100%;
+    height: 25px;
+    padding-left: 25px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: 16px;
+}
+
+.name-zone p {
+    font-family: 'Ale';
+    font-size: 25px;
+}
+
+.line {
+    font-family: 'Ale';
+    font-size: 20px;
+    color: #AB7F0A;
+}
+
+.score-zone {
+    width: 100%;
+    height: 4%;
+    padding-left: 25px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.score-image {
+    height: 160%;
+}
+
+.info-zone {
+    width: 100%;
+    height: 15%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 15px;
+    border-top: 1px solid rgb(212, 212, 211);
+    border-bottom: 1px solid rgb(212, 212, 212);
+    margin-bottom: 15px;
+}
+
+.info-image {
+    width: 85%;
+}
+
+.photo-zone {
+    width: 100%;
+    height: 50%;
+}
+
+.photo-title-zone {
+    width: 100%;
+    height: 8%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding-left: 22px;
+    margin-top: 30px;
+    margin-bottom: -15px;
+}
+
+.photo-image {
+    width: 8%;
+}
+
+.photo-title {
+    font-family: 'Ale';
+    font-size: 20px;
+    margin-left: 10px;
+}
+
+.photoModalContent {
+    width: 100%;
+    height: 140%;
+    overflow-x: auto;
+    /* Agrega scroll horizontal */
+    white-space: nowrap;
+    /* Evita saltos de línea */
+    max-width: 100%;
+}
+
+.photoList {
+    /* Estilos para la lista de fotos */
+    display: inline-block;
+    white-space: nowrap;
+}
+
+.photoList img {
+    /* Estilos para cada imagen */
+    width: 330px;
+    /* Ancho de cada imagen */
+    height: auto;
+    /* Altura automática */
+    margin-right: 10px;
+    /* Espacio entre imágenes */
+    border-radius: 20px;
+    margin-left: 15px;
+    margin-top: 25px;
+}
+
+.fixed-footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    color: white;
+    text-align: center;
+    height: 18%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.price-container {
+    width: 100%;
+    height: 50%;
+    background-color: rgb(4, 3, 3);
+    border-top-right-radius: 15px;
+    border-top-left-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+
+.purchase-btn {
+    background: none;
+    border: none;
+    width: 100%;
+    height: 50%;
+    background: linear-gradient(to top, #6AAB01, #4C7B00);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.dollar,
+.price,
+.currency {
+    font-family: 'Bogart';
+}
+
+.price {
+    font-size: 35px;
+    margin: 12px;
+}
+
+.purchase-btn p {
+    color: white;
+    font-family: 'Ale';
+    font-size: 36px;
+}
+
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.modal-content {
+    background-color: white;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 600px;
+    position: relative;
+}
+
+.scrollview-container {
+    width: 100%;
+    overflow-x: auto;
+    white-space: nowrap;
+    font-size: 24px;
+    height: 57%;
+}
+
+.scrollview-container::-webkit-scrollbar {
+    display: none;
+    /* Oculta la barra de desplazamiento en WebKit */
+}
+
+.scrollview-item {
+    display: inline-block;
+    width: 63%;
+    height: 90%;
+    margin-top: 25px;
+    margin-left: 20px;
+    background-color: rgba(0, 0, 0, 0.09);
+    border-radius: 30px;
+}
+
+.scrollview-item:last-child {
+    margin-right: 25px;
+}
+
+.photo-container {
+    width: 100%;
+    height: 33%;
+    background-color: rgba(0, 0, 0, 0.05);
+    border-radius: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.model-name-container {
+    width: 100%;
+    height: 14%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.model-name-container p {
+    font-family: 'Ale';
+    font-weight: 900;
+    font-size: 21px;
+    margin-left: 20px;
+}
+
+.price-details {
+    width: 100%;
+    height: 25%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.price-before-container {
+    width: 100%;
+    height: 30%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding-left: 20px;
+}
+
+.price-after-container {
+    width: 100%;
+    height: 40%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding-left: 20px;
+}
+
+.price-before-container p {
+    font-family: 'Bogart';
+    color: #ff1e00c2;
+    font-size: 19px;
+}
+
+.price-after-container p {
+    font-family: 'Bogart';
+    color: #000000;
+    font-size: 31px;
+    font-weight: 500;
+}
+
+.dollar2 {
+    font-size: 19px;
+    margin-right: 7px;
+}
+
+.line2-container {
+    width: 100%;
+    height: 1%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.line2 {
+    width: 85%;
+    height: 15%;
+    background-color: #000000;
+}
+
+.buttons-zone {
+    width: 100%;
+    height: 24%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.button1, .button2 {
+    background: none;
+    border: none;
+    width: 30%;
+    height: 100%;
+    font-family: 'Bogart';
+    font-size: 55px;
+    color: rgba(0, 0, 0, 0.613);
+}
+
+.noir-quantity {
+    width: 40%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Bogart';
+    font-size: 45px;
+}
+
+.carey-quantity {
+    width: 40%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Bogart';
+    font-size: 45px;
+    line-height: 0%;
+}
+
+.photo-container img {
+    width: 80%;
+}
+
+.final-price-container {
+    width: 100%;
+    height: 18%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.dollar3 {
+    font-family: 'Bogart';
+    font-size: 23px;
+}
+
+.final-price {
+    font-family: 'Bogart';
+    font-size: 48px;
+    margin-left: 12px;
+}
+
+.final-button {
+    background: none;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to top, #6AAB01, #4C7B00);
+    width: 100%;
+    height: 10%;
+    color: white;
+    font-family: 'Ale';
+    font-size: 27px;
+}
